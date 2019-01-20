@@ -1,64 +1,44 @@
-/*
-* Javascript Object By Dot notation
-*/
-// object decleration 
- const a = {
-     name: "Rawshan",
-     age: 25,
- }
- console.log(a);  //{name: "Rawshan", age: 25}
- 
- // specefic property k console log kora
-console.log(a.name);  //Rawshan
-console.log(a.age);  //25
+// // Simple functions
+// function myFunction(){}
+// console.log(myFunction); // myFunction(){}
+// console.log(myFunction()); // Undefine
+// myFunction(); // Nothing to Show
+// const resultFunction = myFunction();
+// console.log(resultFunction); // Undefine
+// console.log(myFunction(10)); // Undefine
 
-// change the value of object property
-a.name = "Rawshan Arshalan";
-console.log(a); //{name: "Rawshan Arshalan", age: 25}
-console.log(a.name);  //Rawshan Arshalan
+// Paremeter of a Functions
+// function myFunction(a,b){
+//     console.log(a);
+//     console.log(b);
+// }
+// myFunction();  // undefine undefine // theere are no elenemt in the functions
+// myFunction(10,30);  // 10  30
+// console.log(myFunction(10,10)); // 10 10 undefined because no return keyword in the function
+// console.log(a) // Uncaught ReferenceError: a is not defined
 
-// add new property in the object
-a.depertment = "EEE";
-a.year = 2020;
-console.log(a); //{name: "Rawshan Arshalan", age: 25, depertment: "EEE", year: 2020}
-console.log(a.year);  //2020
+// function myFunction(a, b){
+//     console.log(a);
+//     return a+b;
+//     console.log(b); // no function is excution becaue after return no code are run.
+// }
+// // myFunction(10, 30); // not show because it there are no console function
+// console.log(myFunction(10, 30)); // 40
 
-// delete the property of the object
-delete a.name;
-console.log(a); //{age: 25, depertment: "EEE", year: 2020}
+// outerFunction and innerFunction process
+// function outerFunction(a, b){
+//     function innerFunction(sum){
+//         return sum*sum;
+//     }
+//     const sum = a+b;
+//     const squere_root = innerFunction(sum);
+//     console.log(squere_root);
+// }
+// outerFunction(2, 2);
 
-/*
-* Object Operation by Bracket Notation
-*/
-const myCity = {
-    name: "Narail",
-    country: "Bangladesh"
+
+// function k variable ar modde assign kora
+const myFunction = function(a, b){
+    return a+b;
 }
-console.log(myCity["name"]); // Narail
-
-// Change the property value of 
-myCity["name"] = "Khulna";
-console.log(myCity); //{name: "Khulna", country: "Bangladesh"}
-
-// add new property in the Object
-myCity["thana"] = "Narail Too";
-console.log(myCity); //{name: "Narail", country: "Bangladesh", thana: "Narail Too"}
-
-// Delete Property
-delete myCity["name"];
-console.log(myCity); //{country: "Bangladesh", thana: "Narail Too"}
-
-// Nested Object
-// nested object is and same process
-
-const myPost = {
-    name: "My Post",
-    count : 4,
-    info: {
-        prop: "No Prop",
-        num: 8
-    }
-}
-console.log(myPost); //{name: "My Post", count: 4, info: {…}}
-console.log(myPost.info.num); // 8
-console.log(myPost.info["num"]); // 8
+console.log(myFunction(50,20));
