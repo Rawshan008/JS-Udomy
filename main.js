@@ -1,27 +1,21 @@
-// scope varable
-// 1. Local Scope 
-// 2. Global Scope
-
-// let b; // global variable
-// function myFun(){
-//     let a = 50;  // local variable
-//     b = 40;
-//     console.log(a);
-//     console.log(b);
-// }
-// myFun();
-
-// function myFun1(){
-//     b = 100;
-//     console.log(b); //100
-//     // console.log(a);  // a is not define
-// }
-// myFun1();
-"use strict";
-function myFun(){
-    a = true;
-    console.log(a); // true
+// function decleration
+function fn(a, b){
+    return a + b;
 }
-myFun();
+console.log(fn(20,52));
 
+// anononmous function decleration
+var fn1 = function (a, b){
+    return a + b;
+} 
+console.log(fn1(34, 5));
 
+//IIFE function excution
+(function(){
+    console.log("I am IIFT excution");
+})();
+
+// setTimeout function
+setTimeout(function(){
+    console.log("I am IIFT excution");
+}, 3000);
